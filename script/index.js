@@ -8,19 +8,18 @@ function rgbToHex() {
   let grnInput = parseInt(document.getElementById('grnInput').value);
   let bluInput = parseInt(document.getElementById('bluInput').value);
 
-  //Converting a single color value to hexadecimal
+  //Converting the single color value to a hexadecimal
   function Hex(color) {
       let hex = color.toString(16);
       return hex.length == 1 ? "0" + hex : hex;
   }
-  // Converting each RGB value to hexadecimal
+  // Converting each RGB value to a hexadecimal
   let red = Hex(redInput);
   let grn = Hex(grnInput);
   let blu = Hex(bluInput);
 
   hexOutput.value = "#" + red + grn + blu;
 }
-
 calButton.addEventListener('click', rgbToHex);
 
 
